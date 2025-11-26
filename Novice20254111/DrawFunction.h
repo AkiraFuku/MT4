@@ -1,6 +1,8 @@
-﻿#pragma once
+#pragma once
+
+#pragma once
 #include <KamataEngine.h>
-#include "MassFunction.h"
+#include "MathFunction.h"
 #include <Novice.h>
 using namespace KamataEngine;
 struct Sphere{

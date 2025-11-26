@@ -20,10 +20,13 @@
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp">
       <Filter>KamataEngine\Adapter</Filter>
     </ClCompile>
-    <ClCompile Include="DrawFunction.cpp">
+    <ClCompile Include="RotateFunction.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
-    <ClCompile Include="MassFunction.cpp">
+    <ClCompile Include="MathFunction.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawFunction.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -109,7 +112,8 @@
     <ClInclude Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.h">
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
+    <ClInclude Include="RotateFunction.h" />
+    <ClInclude Include="MathFunction.h" />
     <ClInclude Include="DrawFunction.h" />
-    <ClInclude Include="MassFunction.h" />
   </ItemGroup>
 </Project>

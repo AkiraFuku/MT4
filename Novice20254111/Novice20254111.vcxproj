@@ -112,7 +112,8 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp" />
     <ClCompile Include="DrawFunction.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MassFunction.cpp" />
+    <ClCompile Include="MathFunction.cpp" />
+    <ClCompile Include="RotateFunction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\DirectXGame\3d\Camera.h" />
@@ -143,7 +144,8 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="C:\KamataEngine\DirectXGame\scene\GameScene.h" />
     <ClInclude Include="C:\KamataEngine\Adapter\Novice.h" />
     <ClInclude Include="DrawFunction.h" />
-    <ClInclude Include="MassFunction.h" />
+    <ClInclude Include="MathFunction.h" />
+    <ClInclude Include="RotateFunction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

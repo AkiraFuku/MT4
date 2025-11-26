@@ -1,7 +1,7 @@
 #include <Novice.h>
 #include <imgui.h>
 #include <KamataEngine.h>
-#include "MassFunction.h"
+#include "MathFunction.h"
 #include "DrawFunction.h"
 const char kWindowTitle[] = "学籍番号";
 

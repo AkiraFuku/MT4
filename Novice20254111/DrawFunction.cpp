@@ -1,4 +1,4 @@
-﻿#include"DrawFunction.h"
+#include"DrawFunction.h"
 #define NOMINMAX
 #include<algorithm>
 #include <functional>
