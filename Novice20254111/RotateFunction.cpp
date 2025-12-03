@@ -40,3 +40,13 @@ Matrix4x4 MakeRotateAxisAngle(const Vector3& axis, float angle)
 
 
 }
+
+Matrix4x4 DirectionToDirection(const Vector3& from, const Vector3& to)
+{
+    Vector3 n=Normalize(Cross(from,to));
+    float c=Dot(from,to);
+    float s=Length(Cross(from,to));
+
+    return MakeRotateAxisAngle(n, std::atan2(s,c));
+
+}
