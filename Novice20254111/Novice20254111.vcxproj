@@ -113,6 +113,7 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="DrawFunction.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MathFunction.cpp" />
+    <ClCompile Include="Quanternion.cpp" />
     <ClCompile Include="RotateFunction.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +146,7 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="C:\KamataEngine\Adapter\Novice.h" />
     <ClInclude Include="DrawFunction.h" />
     <ClInclude Include="MathFunction.h" />
+    <ClInclude Include="Quanternion.h" />
     <ClInclude Include="RotateFunction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
