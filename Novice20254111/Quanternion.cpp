@@ -44,10 +44,14 @@ Quaternion Normalize(const Quaternion& quaternion)
 {
 	float norm = Norm(quaternion);
 	Quaternion result;
-	result.w = quaternion.w / norm;
-	result.x = quaternion.x / norm;
-	result.y = quaternion.y / norm;
-	result.z = quaternion.z / norm;
+	if (norm != 0.0f) {
+        result.w = quaternion.w / norm;
+        result.x = quaternion.x / norm;
+        result.y = quaternion.y / norm;
+        result.z = quaternion.z / norm;
+    } else {
+        result = {0.0f, 0.0f, 0.0f, 0.0f}; 
+    }
 	return result;
 }
 
@@ -66,8 +70,8 @@ Quaternion Inverse(const Quaternion& quaternion)
 void QuaternionScreenPrintf(Vector2 pos, const Quaternion& quaternion, const char* label)
 {
 	Novice::ScreenPrintf(static_cast<int>(pos.x), static_cast<int>(pos.y), "%.02f", quaternion.x);
-	Novice::ScreenPrintf(static_cast<int>(pos.x, + kColumnWidth), static_cast<int>(pos.y), "%.02f ", quaternion.y);
-	Novice::ScreenPrintf(static_cast<int>(pos.x, + kColumnWidth * 2), static_cast<int>(pos.y), "%.02f ", quaternion.z);
-	Novice::ScreenPrintf(static_cast<int>(pos.x, + kColumnWidth * 3),static_cast<int>( pos.y), "%.02f ", quaternion.w);
-	Novice::ScreenPrintf(static_cast<int>(pos.x, + kColumnWidth * 4),static_cast<int>( pos.y), ":%s", label);
+	Novice::ScreenPrintf(static_cast<int>(pos.x + kColumnWidth), static_cast<int>(pos.y), "%.02f ", quaternion.y);
+	Novice::ScreenPrintf(static_cast<int>(pos.x + kColumnWidth * 2), static_cast<int>(pos.y), "%.02f ", quaternion.z);
+	Novice::ScreenPrintf(static_cast<int>(pos.x + kColumnWidth * 3),static_cast<int>( pos.y), "%.02f ", quaternion.w);
+	Novice::ScreenPrintf(static_cast<int>(pos.x + kColumnWidth * 4),static_cast<int>( pos.y), ":%s", label);
 }
