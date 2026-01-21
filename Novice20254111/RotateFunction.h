@@ -4,6 +4,11 @@
 #include "Quanternion.h"
 using namespace KamataEngine;
 
+
+
+Quaternion Slerp(const Quaternion& q0,const Quaternion& q1,float t);
+
+
 Quaternion MakeRotateAxisAngleQuaternion(const Vector3& axis,float angle);
 
 Vector3 RotateVector(const Vector3& vector ,const Quaternion& quaternion);

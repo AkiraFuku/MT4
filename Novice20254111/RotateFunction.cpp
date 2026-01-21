@@ -2,6 +2,8 @@
 #include "MathFunction.h"
 #include "DrawFunction.h"
 #include <numbers>
+#include <cmath>
+
 
 Quaternion MakeRotateAxisAngleQuaternion(const Vector3& axis, float angle)
 {
@@ -147,4 +149,31 @@ Matrix4x4 DirectionToDirection(const Vector3& from, const Vector3& to)
 	float angle = std::atan2(s, c);
 
 	return MakeRotateAxisAngle(axis, angle);
+}
+
+Quaternion Slerp(const Quaternion& q0, const Quaternion& q1, float t)
+{
+
+	float dot = q0.x * q1.x + q0.y * q1.y + q0.z * q1.z + q0.w * q1.w;
+	Quaternion targetQ0 = q0;
+	if (dot<0.0f)
+	{
+		targetQ0 = -targetQ0;
+		dot=-dot;
+	}
+	float theta=std::acosf(dot);
+	
+
+	
+	float scale0=std::sinf((1.0f-t)*theta)/std::sinf(theta);
+	float scale1=std::sinf(t*theta)/std::sinf(theta);
+
+
+	Quaternion result{};
+    result.x = scale0 * targetQ0.x + scale1 * q1.x;
+    result.y = scale0 * targetQ0.y + scale1 * q1.y;
+    result.z = scale0 * targetQ0.z + scale1 * q1.z;
+    result.w = scale0 * targetQ0.w + scale1 * q1.w;
+
+	return result;
 }

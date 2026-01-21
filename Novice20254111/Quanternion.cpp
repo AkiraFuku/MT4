@@ -1,6 +1,15 @@
 #include "Quanternion.h"
 #include "MathFunction.h"
 #include <cmath>
+Quaternion operator-(const Quaternion q)
+{
+	return {-q.x, -q.y, -q.z, -q.w};
+	
+}
+Quaternion operator*(const Quaternion& q1, const Quaternion& q2)
+{
+	return Multiply(q1,q2);
+}
 Quaternion Multiply(const Quaternion& lhs, const Quaternion& rhs)
 {
 	Quaternion result;
@@ -11,7 +20,7 @@ Quaternion Multiply(const Quaternion& lhs, const Quaternion& rhs)
 	return result;
 }
 
-Quaternion idetityQuaternion()
+Quaternion identityQuaternion()
 {
 	Quaternion result;
 
